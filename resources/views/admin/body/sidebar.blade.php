@@ -3,7 +3,7 @@
       <!-- Aplication Brand -->
       <div class="app-brand">
         <a href="{{ url('/') }}">
-          <span class="brand-name">Rohit's Dashboard</span>
+          <span class="brand-name">{{ auth() -> user() -> name }}'s Dashboard</span>
         </a>
       </div>
       <!-- begin sidebar scrollbar -->
@@ -14,34 +14,34 @@
               <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#dashboard"
                 aria-expanded="false" aria-controls="dashboard">
                 <i class="mdi mdi-home"></i>
-                <span class="nav-text">Home</span> <b class="caret"></b>
+                <span class="nav-text">Landing's pagina</span> <b class="caret"></b>
               </a>
               <ul  class="collapse show"  id="dashboard"
                 data-parent="#sidebar-menu">
                 <div class="sub-menu">
                       <li class="active">
                         <a class="sidenav-item-link" href="{{ route('home.about') }}">
-                          <span class="nav-text">Home About</span>
+                          <span class="nav-text">Over</span>
                         </a>
                       </li>
                       <li class="active">
                         <a class="sidenav-item-link" href="{{ route('all.category') }}">
-                          <span class="nav-text">Category</span>
+                          <span class="nav-text">Categories</span>
                         </a>
                       </li>
                       <li class="active">
                         <a class="sidenav-item-link" href="{{ route('multi.image') }}">
-                          <span class="nav-text">Home Portfolio</span>
+                          <span class="nav-text">Portfolio</span>
                         </a>
                       </li>
                       <li class="active">
                         <a class="sidenav-item-link" href="{{ route('all.brand') }}">
-                          <span class="nav-text">Home Brand</span>
+                          <span class="nav-text">Merken</span>
                         </a>
                       </li>
                       <li class="active">
                         <a class="sidenav-item-link" href="{{ route('home.slider') }}">
-                          <span class="nav-text">Slider</span>
+                          <span class="nav-text">Dia's regelaar</span>
                         </a>
                       </li>
                 </div>
@@ -58,12 +58,12 @@
                 <div class="sub-menu">
                   <li class="active">
                     <a class="sidenav-item-link" href="{{ route('admin.contact') }}">
-                      <span class="nav-text">Contact Profiles</span>
+                      <span class="nav-text">Profielen</span>
                     </a>
                   </li>
                   <li class="active">
                     <a class="sidenav-item-link" href="{{ route('admin.message') }}">
-                      <span class="nav-text">Contacts Messages</span>
+                      <span class="nav-text">Berichten</span>
                     </a>
                   </li>
                 </div>
@@ -73,12 +73,11 @@
                 aria-expanded="false" aria-controls="pages">
                 <a href="{{ route('profile.update') }}">
                   <i class="mdi mdi-account"></i>
-                  <span class="nav-text">User's Profile</span>
+                  <span class="nav-text">Gebruiker's Profiel</span>
                 </a>
               </a>
             </li>
         </ul>
       </div>
-      <hr class="separator" />
     </div>
   </aside>

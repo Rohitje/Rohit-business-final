@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">  
-    <title>Easy - Admin Dashboard Template</title>  
+    <title>{{ auth() -> user() -> name }}'s admin</title>  
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700 rel="stylesheet">
     <link href="https://cdn.materialdesignicons.com/3.0.39/css/materialdesignicons.min.css" rel="stylesheet"> 
@@ -40,7 +40,7 @@
             <nav class="navbar navbar-static-top navbar-expand-lg">
               <!-- Sidebar toggle button -->
               <button id="sidebar-toggler" class="sidebar-toggle">
-                <span class="sr-only">Toggle navigation</span>
+                <span class="sr-only">Toggle navigatie</span>
               </button>
               <!-- search form -->
               <div class="search-form d-none d-lg-inline-block">
@@ -48,7 +48,7 @@
                   <button type="button" name="search" id="search-btn" class="btn btn-flat">
                     <i class="mdi mdi-magnify"></i>
                   </button>
-                  <input type="text" name="query" id="search-input" class="form-control" placeholder="Type something..."
+                  <input type="text" name="query" id="search-input" class="form-control" placeholder="Type iets random hier..."
                     autofocus autocomplete="off">
                 </div>
                 <div id="search-results-container">
@@ -70,22 +70,22 @@
                       </li>
                       <li>
                         <a href="{{ route('profile.update') }}">
-                          <i class="mdi mdi-account"></i>My Profile
+                          <i class="mdi mdi-account"></i>Mijn profiel
                         </a>
                       </li>
                       <li>
                         <a href="{{ route('change.password') }}">
-                          Change Password
+                          Verander Passwoord
                         </a>
                       </li>
                       <li>
-                        <a href="#"> <i class="mdi mdi-diamond-stone"></i>Projects</a>
+                        <a href="#"> <i class="mdi mdi-diamond-stone"></i>Projecten</a>
                       </li>
                       <li>
-                        <a href="#"> <i class="mdi mdi-settings"></i>Account Setting</a>
+                        <a href="#"> <i class="mdi mdi-settings"></i>Account instellingen</a>
                       </li>
                       <li class="dropdown-footer">
-                        <a href="{{ route('user.logout') }}"> <i class="mdi mdi-logout"></i>Log Out</a>
+                        <a href="{{ route('user.logout') }}"> <i class="mdi mdi-logout"></i>Uitloggen</a>
                       </li>
                     </ul>
                   </li>

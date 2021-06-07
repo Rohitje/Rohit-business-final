@@ -14,15 +14,15 @@
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                   </div>
                 @endif --}}
-                <div class="card-header">All Category</div>
+                <div class="card-header">Alle Categorieën</div>
               <table class="table">
                   <thead>
                     <tr>
-                      <th scope="col">Serial No.</th>
-                      <th scope="col">Category Name</th>
-                      <th scope="col">User</th>
-                      <th scope="col">Created At</th>
-                      <th scope="col">Action</th>
+                      <th scope="col">Serie Nr.</th>
+                      <th scope="col">Categorie Naam</th>
+                      <th scope="col">Gebruiker</th>
+                      <th scope="col">Gemaakt Op</th>
+                      <th scope="col">Actie</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -35,14 +35,14 @@
                         <td>{{ $category -> user -> name }}</td> {{-- user_id veranderen naar naam van de user --}}
                         <td>
                           @if ($category -> created_at == NULL)
-                          <span class="text-danger">No date set</span>
+                          <span class="text-danger">Geen datum gezet</span>
                           @else
                           {{ Carbon\Carbon::parse($category -> created_at) -> diffForHumans() }}
                           @endif
                         </td>
                         <td>
                           <a href="{{ url('category/edit/'.$category -> id) }}" class="btn btn-info">Edit</a>
-                          <a href="{{ url('softdelete/category/'.$category -> id) }}" class="btn btn-danger">Delete</a>
+                          <a href="{{ url('softdelete/category/'.$category -> id) }}" class="btn btn-danger">Verwijder</a>
                         </td>
                       </tr>
                     @endforeach
@@ -54,18 +54,18 @@
             </div>
             <div class="col-md-4">
               <div class="card">
-                <div class="card-header">Add Category</div>
+                <div class="card-header">Voeg Categorie Toe</div>
                 <div class="card-body">
                 <form action="{{ route('store.category') }}" method="POST">
                   @csrf
                   <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Category Name</label>
+                    <label for="exampleInputEmail1" class="form-label">Categorie Naam</label>
                     <input type="text" name="category_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                       @error('category_name')
                         <span class="text-danger">{{ $message }}</span>
                       @enderror
                   </div>
-                  <button type="submit" class="btn btn-primary">Add Category</button>
+                  <button type="submit" class="btn btn-primary">Voeg Categorie Toe</button>
                 </form>
               </div>
               </div>
@@ -79,15 +79,15 @@
         <div class="row">
           <div class="col-md-8">
             <div class="card">
-              <div class="card-header">Trash List</div>
+              <div class="card-header">Vuilbak Lijst</div>
             <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col">Serial No.</th>
-                    <th scope="col">Category Name</th>
-                    <th scope="col">User</th>
-                    <th scope="col">Created At</th>
-                    <th scope="col">Action</th>
+                    <th scope="col">Serie Nr.</th>
+                    <th scope="col">Categorie Naam</th>
+                    <th scope="col">Gebruiker</th>
+                    <th scope="col">Gemaakt Op</th>
+                    <th scope="col">Actie</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -98,14 +98,14 @@
                       <td>{{ $category -> user -> name }}</td> {{-- user_id veranderen naar naam van de user --}}
                       <td>
                         @if ($category -> created_at == NULL)
-                          <span class="text-danger">No date set</span>
+                          <span class="text-danger">Geen datum gezet</span>
                         @else
                           {{ Carbon\Carbon::parse($category -> created_at) -> diffForHumans() }}
                         @endif
                       </td>
                       <td>
-                        <a href="{{ url('category/restore/'.$category -> id) }}" class="btn btn-info">Restore</a>
-                        <a href="{{ url('pdelete/category/'.$category -> id) }}" class="btn btn-danger">Delete Forever</a>
+                        <a href="{{ url('category/restore/'.$category -> id) }}" class="btn btn-info">Herstel</a>
+                        <a href="{{ url('pdelete/category/'.$category -> id) }}" class="btn btn-danger">Verwijder Voorgoed</a>
                       </td>
                     </tr>
                   @endforeach

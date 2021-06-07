@@ -8,15 +8,15 @@
 
               <div class="col-md-8">
                 <div class="card">
-                  <div class="card-header">All Brands</div>
+                  <div class="card-header">Alle Merken</div>
                 <table class="table">
                     <thead>
                       <tr>
-                        <th scope="col">Serial No.</th>
-                        <th scope="col">Brand Name</th>
-                        <th scope="col">Brand Image</th>
-                        <th scope="col">Created At</th>
-                        <th scope="col">Action</th>
+                        <th scope="col">Serial Nr.</th>
+                        <th scope="col">Merk Name</th>
+                        <th scope="col">Merk Image</th>
+                        <th scope="col">Gemaakt Op</th>
+                        <th scope="col">Actie</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -47,25 +47,25 @@
               </div>
               <div class="col-md-4">
                 <div class="card">
-                  <div class="card-header">Add Brand</div>
+                  <div class="card-header">Voeg Merk Toe</div>
                   <div class="card-body">
                   <form action="{{ route('store.brand') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label">Brand Name</label>
+                      <label for="exampleInputEmail1" class="form-label">Merknaam</label>
                       <input type="text" name="brand_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                         @error('brand_name')
                           <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
                     <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label">Brand Image</label>
+                      <label for="exampleInputEmail1" class="form-label">Merk Foto</label>
                       <input type="file" name="brand_image" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                         @error('brand_image')
                           <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
-                    <button type="submit" class="btn btn-primary">Add Brand</button>
+                    <button type="submit" class="btn btn-primary">Voeg Merk Toe</button>
                   </form>
                 </div>
                 </div>

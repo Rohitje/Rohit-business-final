@@ -1,6 +1,5 @@
 @php
   $sliders = DB::table('sliders') -> get();
-
 @endphp
 
 <!-- ======= Hero Section ======= -->
@@ -15,7 +14,7 @@
             <div class="carousel-content animate__animated animate__fadeInUp">
               <h2>{{ $slider -> title }}</h2>
               <p>{{ $slider -> description }}</p>
-              <div class="text-center"><a href="" class="btn-get-started">Read More</a></div>
+              <div class="text-center"><a href="" class="btn-get-started">Lees Meer</a></div>
             </div>
           </div>
         </div>
@@ -24,12 +23,12 @@
 
     <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon icofont-simple-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
+      <span class="sr-only">Vorige</span>
     </a>
 
     <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
       <span class="carousel-control-next-icon icofont-simple-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
+      <span class="sr-only">Volgende</span>
     </a>
 
     <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>

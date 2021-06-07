@@ -4,16 +4,32 @@
     <h1 class="logo mr-auto"><a href="{{ url('/') }}"><span>Rohit's</span> Business</a></h1>
     <nav class="nav-menu d-none d-lg-block">
       <ul>
-        <li class="active"><a href="{{ url('/') }}">{{ __('translate.home') }}</a></li>
-        <li><a href="{{ route('home.about') }}">{{ __('translate.about') }}</a></li>
-        <li><a href="{{ route('portfolio') }}">{{ __('translate.portfolio') }}</a></li>
-        <li><a href="{{ route('all.category') }}">{{ __('translate.category') }}</a></li>
-        <li><a href="{{ route('home.about') }}">{{ __('translate.blog') }}</a></li>
-        <li><a href="{{ route('contact') }}">{{ __('translate.contact') }}</a></li>
-        <li><a href="#">{{ __('translate.services') }}</a></li>
-        <li><a href="{{ route('login') }}">{{ __('translate.login') }}</a></li>
+        <li><a href="{{ route('home.about') }}">Over</a></li>
+        <li><a href="{{ route('portfolio') }}">Portfolio</a></li>
+        <li><a href="{{ route('all.category') }}">Categories</a></li>
+        <li><a href="{{ route('home.about') }}">Blog</a></li>
+        <li><a href="{{ route('contact') }}">Contact</a></li>
+        <li><a href="#">Diensten</a></li>
+        @auth
+        <li><a href="{{ route('login') }}">{{ auth() -> user() -> name }}</a></li>
+        <li>
+          <form action="{{ route('logout') }}" method="post">
+            @csrf
+            <button type="submit" style="border:none; background: none;">Uitloggen</button>
+          </form>
+        </li>
+        @endauth
+
+        @guest
+          <li>
+            <a href="{{ route('login') }}">Inloggen</a>
+          </li>
+          <li>
+            <a href="{{ route('register') }}">Registreren</a>
+          </li>
+        @endguest
         
-        <li class="nav-item dropdown">
+        {{-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 {{ Config::get('languages')[App::getLocale()] }}
             </a>
@@ -24,7 +40,7 @@
                   @endif
               @endforeach
             </div>
-        </li>
+        </li> --}}
 
       </ul>
     </nav><!-- .nav-menu -->

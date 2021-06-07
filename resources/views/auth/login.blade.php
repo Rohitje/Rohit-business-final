@@ -23,20 +23,8 @@
 
   <!-- SLEEK CSS -->
   <link id="sleek-css" rel="stylesheet" href="{{ asset('backend/assets/css/sleek.css') }}" />
-
-  
-
   <!-- FAVICON -->
   <link href="{{ asset('backend/assets/img/favicon.png') }}" rel="shortcut icon" />
-
-  <!--
-    HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
-  -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
   <script src="{{ asset('assets/plugins/nprogress/nprogress.js') }}"></script>
 </head>
 
@@ -56,7 +44,7 @@
                       <path class="logo-fill-white" fill="#FFF" d="M11 4v25l8 4V0z" />
                     </g>
                   </svg>
-                  <span class="brand-name">Easy Dashboard</span>
+                  <span class="brand-name">Rohit's Business</span>
                 </a>
               </div>
             </div>
@@ -67,30 +55,30 @@
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
               @endif
-              <h4 class="text-dark mb-5">Sign In</h4>
+              <h4 class="text-dark mb-5">Log In</h4>
               <form method="POST" action="{{ route('login') }}">
                 @csrf
                 <div class="row">
                   <div class="form-group col-md-12 mb-4">
-                    <input type="email" name="email" class="form-control input-lg" aria-describedby="emailHelp" placeholder="Email">
+                    <input type="email" name="email" class="form-control input-lg" aria-describedby="emailHelp" placeholder="E-mail">
                   </div>
                   <div class="form-group col-md-12 ">
-                    <input type="password" name="password" class="form-control input-lg" placeholder="Password">
+                    <input type="password" name="password" class="form-control input-lg" placeholder="Passwoord">
                   </div>
                   <div class="col-md-12">
                     <div class="d-flex my-2 justify-content-between">
                       <div class="d-inline-block mr-3">
-                        <label class="control control-checkbox">Remember me
+                        <label class="control control-checkbox">Onthoudt Mij
                           <input type="checkbox" />
                           <div class="control-indicator"></div>
                         </label>
                 
                       </div>
-                      <p><a class="text-blue" href="{{ route('password.request') }}">Forgot Your Password?</a></p>
+                      <p><a class="text-blue" href="{{ route('password.request') }}">Passwoord Vergeten?</a></p>
                     </div>
-                    <button type="submit" class="btn btn-lg btn-primary btn-block mb-4">Sign In</button>
-                    <p>Don't have an account yet ?
-                      <a class="text-blue" href="{{ route('register') }}">Sign Up</a>
+                    <button type="submit" class="btn btn-lg btn-primary btn-block mb-4">Log In</button>
+                    <p>Nog geen account?
+                      <a class="text-blue" href="{{ route('register') }}">Schrijf je in</a>
                     </p>
                   </div>
                 </div>
@@ -98,11 +86,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="copyright pl-0">
-        <p class="text-center">&copy; 2021 Copyright Easy Dashboard
-          <a class="text-primary" href="http://www.easylearningdb.com.com/" target="_blank">Easy</a>.
-        </p>
       </div>
     </div>
 </body>

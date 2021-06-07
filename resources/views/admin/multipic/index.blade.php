@@ -24,18 +24,18 @@
               </div>
               <div class="col-md-4">
                 <div class="card">
-                  <div class="card-header">Multi Image</div>
+                  <div class="card-header">Portfolio</div>
                   <div class="card-body">
                   <form action="{{ route('store.image') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label">Multi Image</label>
+                      <label for="exampleInputEmail1" class="form-label">Meerdere foto's</label>
                       <input type="file" name="image[]" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" multiple="">
                         @error('image')
                           <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
-                    <button type="submit" class="btn btn-primary">Add Image</button>
+                    <button type="submit" class="btn btn-primary">Voeg Foto's Toe</button>
                   </form>
                 </div>
                 </div>
