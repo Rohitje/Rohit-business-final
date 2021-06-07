@@ -2,7 +2,7 @@
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             Hi.. <b>{{ Auth::user() -> name }}</b> <!-- persoonlijk berichtje na login -->
-            <b style="float:right;">Total Users
+            <b style="float:right;">Totale Gebruikers
                 <span class="badge bg-danger">{{ count($users) }}</span>
             </b>
         </h2>
@@ -14,10 +14,10 @@
                 <table class="table">
                     <thead>
                       <tr>
-                        <th scope="col">Seriel No.</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Created At</th>
+                        <th scope="col">Seriel Nr.</th>
+                        <th scope="col">Naam</th>
+                        <th scope="col">E-mail</th>
+                        <th scope="col">Gemaakt Op</th>
                       </tr>
                     </thead>
                     <tbody>

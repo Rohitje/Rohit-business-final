@@ -27,17 +27,17 @@
                             <div class="row">
                                 <div class="col-lg-4 info">
                                     <i class="icofont-google-map"></i>
-                                    <h4>Location:</h4>
+                                    <h4>Locatie:</h4>
                                     <p>{{ $contact -> address }}</p>
                                 </div>
                                 <div class="col-lg-4 info mt-4 mt-lg-0">
                                     <i class="icofont-envelope"></i>
-                                    <h4>Email:</h4>
+                                    <h4>E-mail:</h4>
                                     <p>{{ $contact -> email }}</p>
                                 </div>
                                 <div class="col-lg-4 info mt-4 mt-lg-0">
                                     <i class="icofont-phone"></i>
-                                    <h4>Call:</h4>
+                                    <h4>Bell mij:</h4>
                                     <p>{{ $contact -> phone }}</p>
                                 </div>
                             </div>
@@ -50,19 +50,19 @@
                             @csrf
                             <div class="form-row">
                                 <div class="col-md-6 form-group">
-                                    <input type="text" name="name" class="form-control" placeholder="Your Name">
+                                    <input type="text" name="name" class="form-control" placeholder="U Naam">
                                 </div>
                                     <div class="col-md-6 form-group">
-                                    <input type="email" class="form-control" name="email" placeholder="Your Email">
+                                    <input type="email" class="form-control" name="email" placeholder="U E-mail">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="subject" placeholder="Subject">
+                                <input type="text" class="form-control" name="subject" placeholder="Onderwerp">
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
+                                <textarea class="form-control" name="message" rows="5" placeholder="Bericht"></textarea>
                             </div>
-                            <button class="btn btn-success" type="submit">Send Message</button>
+                            <button class="btn btn-success" type="submit">Verzend Bericht</button>
                         </form>
                     </div>
                 </div>
