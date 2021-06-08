@@ -32,7 +32,7 @@ class HomeAboutController extends Controller
 
         $notification = array
         (
-            'message' => 'About successfully inserted!',
+            'message' => 'Over successvol toegevoegd!',
             'alert-type' => 'success'
         );
         return Redirect() -> route('home.about') -> with($notification);
@@ -55,7 +55,7 @@ class HomeAboutController extends Controller
 
         $notification = array
         (
-            'message' => 'About successfully updated!',
+            'message' => 'Over successvol geupdatet!',
             'alert-type' => 'error'
         );
         return Redirect() -> route('home.about') -> with($notification);
@@ -66,7 +66,7 @@ class HomeAboutController extends Controller
         $delete = HomeAbout::find($id) -> Delete();
         $notification = array
         (
-            'message' => 'About successfully deleted!',
+            'message' => 'Over successvol verwijderd!',
             'alert-type' => 'error'
         );
         return Redirect() -> back() -> with($notification);

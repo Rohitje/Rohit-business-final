@@ -32,7 +32,7 @@ class ProfileController extends Controller
 
             $notification = array
             (
-                'message' => 'User profile successfully updated!',
+                'message' => 'Gebruikersprofiel succesvol geupdatet!',
                 'alert-type' => 'success'
             );
             return Redirect() -> route('dashboard') -> with($notification);

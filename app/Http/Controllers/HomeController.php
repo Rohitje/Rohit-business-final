@@ -43,7 +43,7 @@ class HomeController extends Controller
 
         $notification = array
         (
-            'message' => 'Slider successfully inserted!',
+            'message' => 'Dia successvol toegevoegd!',
             'alert-type' => 'success'
         );
         return Redirect() -> route('home.slider') -> with($notification);
@@ -66,7 +66,7 @@ class HomeController extends Controller
 
         $notification = array
         (
-            'message' => 'Slider successfully updated!',
+            'message' => 'Dia successvol geupdatet!',
             'alert-type' => 'info'
         );
         return Redirect() -> route('home.slider') -> with($notification);
@@ -78,7 +78,7 @@ class HomeController extends Controller
 
         $notification = array
         (
-            'message' => 'Slider successfully deleted!',
+            'message' => 'Over successvol verwijderd!',
             'alert-type' => 'error'
         );
         return Redirect() -> back() -> with($notification);

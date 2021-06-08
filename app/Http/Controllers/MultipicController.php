@@ -39,7 +39,7 @@ class MultipicController extends Controller
 
         $notification = array
         (
-            'message' => 'Images successfully inserted!',
+            'message' => "Foto's successvol toegevoegd!",
             'alert-type' => 'success'
         );
         Return Redirect() -> back() -> with($notification);

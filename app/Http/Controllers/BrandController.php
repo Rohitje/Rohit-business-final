@@ -31,8 +31,8 @@ class BrandController extends Controller
             'brand_image' => 'required|mimes:jpg, jpeg, png'
         ],
         [
-            'brand_name.required' => 'Please input a brand name.',
-            'brand_image.min' => 'Brand must be longer than 4 characters.'
+            'brand_name.required' => 'Aub type een merknaam in.',
+            'brand_image.min' => 'Merk moet tenminste langer zijn karakters.'
         ]);
 
         $brand_image = $request -> file('brand_image');
@@ -60,7 +60,7 @@ class BrandController extends Controller
 
         $notification = array
         (
-            'message' => 'Brand successfully inserted!',
+            'message' => 'Merk successvol toegevoegd!',
             'alert-type' => 'success'
         );
 
@@ -80,8 +80,8 @@ class BrandController extends Controller
             'brand_name' => 'required|min:4',
         ],
         [
-            'brand_name.required' => 'Please input a brand name.',
-            'brand_image.min' => 'Brand must be longer than 4 characters.'
+            'brand_name.required' => 'Aub type een merk name in.',
+            'brand_image.min' => 'Merk moet langer zijn dan  karakters.'
         ]);
 
         $old_image = $request -> old_image;
@@ -107,7 +107,7 @@ class BrandController extends Controller
             
             $notification = array
             (
-                'message' => 'Brand successfully updated!',
+                'message' => 'Merk successvol geupdatet!',
                 'alert-type' => 'info'
             );
             Return Redirect() -> back() -> with($notification);
@@ -122,7 +122,7 @@ class BrandController extends Controller
 
             $notification = array
             (
-                'message' => 'Brand successfully updated!',
+                'message' => 'Merk successvol geupdatet!',
                 'alert-type' => 'warning'
             );
 
@@ -140,7 +140,7 @@ class BrandController extends Controller
 
         $notification = array
         (
-            'message' => 'Brand successfully deleted!',
+            'message' => 'Merk successvol verwijderd!',
             'alert-type' => 'error'
         );
         return Redirect() -> back() -> with($notification);
@@ -152,7 +152,7 @@ class BrandController extends Controller
         Auth::logout();
         $notification = array
         (
-            'message' => 'You are logged out!',
+            'message' => 'Je bent ingelogd!',
             'alert-type' => 'success'
         );
         return Redirect() -> route('login') -> with($notification);

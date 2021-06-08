@@ -32,7 +32,7 @@ class ChangePassword extends Controller
 
             $notification = array
             (
-                'message' => 'Password successfully updated!',
+                'message' => 'Passwoord successvol geupdatet!',
                 'alert-type' => 'success'
             );
             return Redirect() -> route('login') -> with($notification);
@@ -41,7 +41,7 @@ class ChangePassword extends Controller
         {
             $notification = array
             (
-                'message' => 'Current password is invalid!',
+                'message' => 'Huidige passwoord is ongeldig!',
                 'alert-type' => 'error'
             );
             return Redirect() -> back() -> with($notification);

@@ -32,7 +32,7 @@ class ContactFormController extends Controller
         ]);
         $notification = array
         (
-            'message' => 'Contact successfully inserted!',
+            'message' => 'Contact successvol togevoegd!',
             'alert-type' => 'success'
         );
 
@@ -55,7 +55,7 @@ class ContactFormController extends Controller
         ]);
         $notification = array
         (
-            'message' => 'Contact succesfully updated!',
+            'message' => 'Contact succesvol geupdatet!',
             'alert-type' => 'info'
         );
 
@@ -68,7 +68,7 @@ class ContactFormController extends Controller
 
         $notification = array
         (
-            'message' => 'Contact successfully deleted!',
+            'message' => 'Contact successvol verwijderd!',
             'alert-type' => 'error'
         );
         return Redirect() -> back() -> with($notification);
@@ -93,7 +93,7 @@ class ContactFormController extends Controller
 
         $notification = array
         (
-            'message' => 'Your message has been sent, thank you!',
+            'message' => 'U bericht is verzonden, danku!',
             'alert-type' => 'info'
         );
         return Redirect() -> route('contact') -> with($notification);
@@ -110,7 +110,7 @@ class ContactFormController extends Controller
         $delete = ContactForm::find($id) -> delete();
         $notification = array
         (
-            'message' => 'Message successfully deleted!',
+            'message' => 'Bericht successvol verwijderd!',
             'alert-type' => 'error'
         );
         return Redirect() -> back() -> with($notification);

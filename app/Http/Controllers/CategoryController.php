@@ -45,8 +45,8 @@ class CategoryController extends Controller
             'category_name' => 'required|unique:categories|max:255',
         ],
         [
-            'category_name.required' => 'Please input a category name.',
-            'category_name.max' => 'Category name must be less than 255 characters.',
+            'category_name.required' => 'Aub type een categorie naam in.',
+            'category_name.max' => 'Categorie naam moet minder dan 255 karakters zijn.',
         ]);
         
         //Eloquent ORM
@@ -70,7 +70,7 @@ class CategoryController extends Controller
         DB::table('categories') -> insert($data);
         $notification = array
         (
-            'message' => 'Category successfully inserted!',
+            'message' => 'Categorie successvol toegevoegd!',
             'alert-type' => 'success'
         );
         return Redirect() -> back() -> with($notification);
@@ -104,7 +104,7 @@ class CategoryController extends Controller
         DB::table('categories') -> where('id', $id) -> update($data);
         $notification = array
         (
-            'message' => 'Category successfully updated',
+            'message' => 'Categorie successvol geupdatet',
             'alert-type' => 'success'
         );
         return Redirect() -> route('all.category') -> with($notification);
@@ -116,7 +116,7 @@ class CategoryController extends Controller
         $delete = Category::find($id) -> delete();
         $notification = array
         (
-            'message' => 'Category successfully removed to trash!',
+            'message' => 'Categorie successvol verwijderd naar de vuilbak!',
             'alert-type' => 'warning'
         );
         return Redirect() -> back() -> with($notification);
@@ -128,7 +128,7 @@ class CategoryController extends Controller
         $delete = Category::withTrashed() -> find($id) -> restore();
         $notification = array
         (
-            'message' => 'Category successfully restored!',
+            'message' => 'Categorie successfvol hersteld!',
             'alert-type' => 'info'
         );
         return Redirect() -> back() -> with($notification);
@@ -140,7 +140,7 @@ class CategoryController extends Controller
         $delete = Category::onlyTrashed() ->  find($id) -> forceDelete();
         $notification = array
         (
-            'message' => 'Category successfully deleted permanently!',
+            'message' => 'Categorie successvol voorgoed verwijderd!',
             'alert-type' => 'error'
         );
         return Redirect() -> back() -> with($notification);
